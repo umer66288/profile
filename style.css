@@ -103,15 +103,10 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     position: fixed;
     right: 20px;
     bottom: 20px;
-    /* background-color:rgb(194, 194, 255) ;
-    color: black;
-    border-radius: 50%; */
 }
-/* .gotopbtn:hover{
-   
-    background-color:black ;
-    color: white;
-} */
+.progress-bar{
+    background-color: #a1a1ff;
+}
 
 .fancy {
     border: 2px solid #000;
@@ -177,7 +172,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     .text h2{
         font-size: 33px;
        }
-       .text{
+       #HOME .text{
         padding: 20% 6%;
        }
        .text .btn{
