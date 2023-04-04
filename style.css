@@ -1,0 +1,202 @@
+/* variables */
+:root{
+    --primary-font: ui-monospace,serif,"Playfair Display" ;
+    --secondary-font: "Quicksand", Arial, sans-serif;
+}
+*{
+    scroll-behavior: smooth;
+    font-family: var(--secondary-font);
+}
+.container-lg{
+    max-width: 1200px;
+}
+.container-fluid{
+    padding:0;
+}
+h2,h4{
+    font-family: var(--primary-font);
+}
+.offcanvas{
+    max-width: 300px;
+}
+.aside{
+    overflow-y: scroll;
+    background: #f2f3f7;
+    height: 100vh;
+    position:sticky;
+    top:0;
+    bottom:0;
+}
+.dp img{
+    border: 10px solid #c5c4c4;
+    height: 200px;
+    width: 200px;
+}
+.menu li{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.list-unstyled a.active, .list-unstyled a:hover{
+    color: rgb(74, 153, 255) !important;
+    text-decoration: underline !important;
+}
+.top-bar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo img{
+    height: 38px;
+}
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ #HOME .text{
+   padding: 38% 8%;
+  }
+  .text h2{
+   font-size: 50px;
+   font-weight: bold;
+  }
+  .contant span{
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #999999;
+    font-weight: 500;
+    letter-spacing: 5px;
+  }
+  .contant h2{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height:2;
+}
+.contant p{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: gray;
+}
+.box{
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.box-margan{
+    margin-top: -81px;
+}
+.accordion-button:focus {
+    box-shadow: none;
+} 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+   color: white;
+   background-color: rgb(126, 126, 126);
+}
+.gotopbtn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    /* background-color:rgb(194, 194, 255) ;
+    color: black;
+    border-radius: 50%; */
+}
+/* .gotopbtn:hover{
+   
+    background-color:black ;
+    color: white;
+} */
+
+.fancy {
+    border: 2px solid #000;
+    display: inline-block;
+    padding:10px 18px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 10px;
+   }
+   .fancy .text {
+    color: black;
+   }
+   
+   .fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #ffffff;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 0.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #ffffff;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+
+   .fancy:hover {
+    color: white;
+    background: black;
+   }
+   
+   .fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy:hover .text {
+    color: white;
+    padding-left: 1.4em;
+   }
+   
+   .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+
+/* RESPONSIVE FOR PHONE */
+  @media only screen and (max-width: 600px) {
+    .text h2{
+        font-size: 33px;
+       }
+       .text{
+        padding: 20% 6%;
+       }
+       .text .btn{
+        font-size: 8px;
+       }
+       .text p{
+        font-size: 13px;
+       }
+       .contant span{
+        letter-spacing: 3px;
+      }
+      .contant h2{
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+    .contant p{
+        font-size: 14px;
+    }
+    h4{
+        font-size: 21px;
+    }
+  }
