@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="weather.css"> -->
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgb(61, 148, 247), rgb(177, 177, 177), rgb(61, 194, 255));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+input {
+    padding: 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+}
+    </style>
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1 style="text-align: center; font-size: 50px;margin-bottom: 20px;">WEATHER APP</h1>
+        <div class="row">
+            <form action="">
+                <input type="search" placeholder="Enter city for weather..." id="search" autofocus>
+            </form>
+        </div>
+        <div class="row" id="weather">
+            <div>
+                <img src="cloud.png" alt="">
+            </div>
+            <div>
+                <h2>0 °C</h2>
+                <h4>clear</h4>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="weather.js"></script> -->
+    <script>
+        let API_KEY = `3265874a2c77ae4a04bb96236a642d2f`
+// let API = `https://api.openweathermap.org/data/2.5/weather?
+// q=${city}&appid=${API_KEY}&units=metric`
+// let IMG_URL = `https: //openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+let form = document.querySelector('form')
+let search = document.querySelector("#search")
+let weather = document.querySelector('#weather')
+
+let getweather = async (city) => {
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+    let response = await fetch(url)
+    let data = await response.json();
+    return showweather(data)
+}
+let showweather = (data) => {
+    console.log(data)
+    weather.innerHTML = `
+            <div>
+            <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
+            </div>
+            <div>
+                <h2>${data.main.temp} °C</h2>
+                <h4>${data.weather[0].description}</h4>
+            </div>
+`
+}
+form.addEventListener(
+    'submit',
+    function (event) {
+        getweather(search.value)
+        event.preventDefault()
+    }
+)
+    </script>
+</body>
+
+</html>
