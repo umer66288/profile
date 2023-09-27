@@ -74,6 +74,8 @@ h2,h4{
     color: white !important;
     font-weight: lighter !important;
     letter-spacing: 4px !important;
+    background-color: black !important;
+    border: none !important;
   }
   .btn-content {
     display: flex;
