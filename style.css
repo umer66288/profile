@@ -220,6 +220,9 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     right: 20px;
     bottom: 20px;
 }
+.gotopbtn i{
+border-radius: 50px;
+}
 .progress-bar{
     background-color: #a1a1ff;
 }
