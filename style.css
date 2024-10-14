@@ -153,7 +153,8 @@ h2,h4{
 }
 .list-unstyled a.active, .list-unstyled a:hover{
     color: rgb(74, 153, 255) !important;
-    text-decoration: underline !important;
+    border-bottom: 2px solid rgb(74, 153, 255) !important;
+    /* text-decoration: underline !important; */
 }
 .top-bar{
     position: sticky;
@@ -298,31 +299,45 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     right: 0;
     width: 0;
    }
-   .contani { 
-    display: inline-block; 
+    .TypingText{
+      overflow: hidden;
   }
-   .taxt {
-   font-family: monospace;
-   border-right: 5px solid;
-   width: 100%;
-   white-space: nowrap;
-   overflow: hidden;
-   animation:
-   typing 2.5s steps(20),
-   cursor .4s step-end infinite alternate;
-   }
-   /* cursor blinking */
-   @keyframes cursor {
-     50% { border-color: transparent }
-    }
-    @keyframes typing{
-      from{width: 0;}
-    }
+  .TypingText .typText{
+      position: relative;
+      color: rgb(74, 153, 255);
+      font-size: 22px;
+      font-weight: 500;
+  }
+  .TypingText .typText.first-typText{
+      color: #212529;
+  }
+  .typText.sec-typText:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #f8f9fa;
+      border-left: 2px solid rgb(74, 153, 255);
+      animation: animate 4s steps(12) infinite;
+  }
+  @keyframes animate{
+      40%, 60%{
+          left: calc(100% + 4px);
+      }
+      100%{
+          left: 0%;
+      }
+  }
 /* RESPONSIVE FOR PHONE */
   @media only screen and (max-width: 600px) {
     .text h2{
-        font-size: 33px;
+        font-size: 31px;
        }
+       .TypingText .typText{
+        font-size: 15px;
+    }
        #HOME .text{
         padding: 20% 6%;
        }
@@ -330,7 +345,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
         font-size: 8px;
        }
        .text p{
-        font-size: 13px;
+        font-size: 11px;
        }
        .contant span{
         letter-spacing: 3px;
@@ -345,4 +360,9 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     h4{
         font-size: 21px;
     }
+  }
+  @media only screen and (max-width: 380px) {
+    .TypingText .typText{
+      font-size: 13px;
+  }
   }
