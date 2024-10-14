@@ -309,7 +309,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
       font-weight: 500;
   }
   .TypingText .typText.first-typText{
-      color: #212529;
+      color: #212529 !important;
   }
   .typText.sec-typText:before{
       content: "";
