@@ -304,7 +304,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
   .TypingText .typText{
       position: relative;
-      color: rgb(74, 153, 255);
+      color: rgb(74, 153, 255) !important;
       font-size: 22px;
       font-weight: 500;
   }
@@ -319,7 +319,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
       height: 100%;
       width: 100%;
       background-color: #f8f9fa;
-      border-left: 2px solid rgb(74, 153, 255);
+      border-left: 2px solid rgb(74, 153, 255) !important;
       animation: animate 4s steps(12) infinite;
   }
   @keyframes animate{
