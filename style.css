@@ -20,6 +20,14 @@
     background-color: black !important;
     border: none !important;
   }
+  .cv-btn{
+    color: rgb(74, 153, 255) !important;
+    border-color: rgb(74, 153, 255) !important;
+  }
+  .cv-btn:hover{
+    color: white !important;
+    background-color: rgb(74, 153, 255) !important;
+  }
   .btn-content {
     display: flex;
     align-items: center;
@@ -212,7 +220,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 } 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
    color: white;
-   background-color: rgb(126, 126, 126);
+   background-color: rgb(74, 153, 255);
 }
 .product img{
   transition: transform 0.5s;
@@ -224,8 +232,11 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 .gotopbtn{
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: 16px;
+    bottom: 16px;
+    background-color: rgb(74, 153, 255);
+    height: 40px;
+    width: 35px;
 }
 .fancy {
     border: 2px solid #000;
@@ -337,7 +348,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
        }
        .TypingText .typText{
         font-size: 15px;
-    }
+       }
        #HOME .text{
         padding: 20% 6%;
        }
@@ -353,16 +364,16 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
       .contant h2{
         font-size: 15px;
         letter-spacing: 3px;
-    }
+      }
     .contant p{
         font-size: 14px;
-    }
+      }
     h4{
         font-size: 21px;
-    }
+      }
   }
   @media only screen and (max-width: 380px) {
     .TypingText .typText{
       font-size: 11px;
   }
-  }
+}
