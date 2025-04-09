@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="mb-3 aside-footer">
-                        <small>© <div class="d-inline-block" id="NowDate"></div> All rights reserved.</small> <br>
+                        <small>© <div class="d-inline-block NowDate"></div> All rights reserved.</small> <br>
                         <small>Designed By M.Umer</small>
                     </div>
 
@@ -107,8 +107,10 @@
                                         <span class="typText sec-typText">Frontend Developer</span>
                                     </div>
 
-                                    <p class="text-muted fw-bold mb-0"><i class="bi bi-bookmark-heart"></i>
-                                        From Imagination to Interactive Reality.
+                                    <p class="text-muted fw-bold mb-0">
+                                        <i class="bi bi-bookmark-heart"></i>
+                                        <!-- From Imagination to Interactive Reality. -->
+                                        From Idea to Interactive Reality.
                                     </p>
 
                                     <p class="text-muted fw-light mb-1 mb-md-2">Blending innovation with
@@ -849,7 +851,7 @@
                                                 <textarea name="Message" id="message" rows="5" class="form-control"
                                                     required autocomplete="off" placeholder="Message"></textarea>
                                             </div>
-                                            
+
                                             <div class="form-group my-3 d-flex justify-content-start">
                                                 <div class="btn-conteiner">
                                                     <div class="btn-content">
@@ -933,7 +935,7 @@
                     </ul>
                 </div>
                 <div class="mb-3 aside-footer">
-                    <small>© <div class="d-inline-block" id="NowDate"></div> All rights reserved.</small> <br>
+                    <small>© <div class="d-inline-block NowDate"></div> All rights reserved.</small> <br>
                     <small>Designed By M.Umer</small>
                 </div>
 
@@ -962,10 +964,13 @@
             buttonElement.click();
         }
 
-        // Current Date
-        const currentDate = new Date().getFullYear()
-        const Data = document.getElementById("NowDate")
-        Data.innerHTML = currentDate
+        const currentDate = new Date().getFullYear();
+        const Data = document.querySelectorAll(".NowDate"); // Get all elements with the 'NowDate' class
+
+        // Loop through each element and update its innerHTML
+        Data.forEach(function(element) {
+        element.innerHTML = currentDate;
+        });
 
         // Typing text
         const typText = document.querySelector(".sec-typText");
