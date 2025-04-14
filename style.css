@@ -329,7 +329,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: #f8f9fa;
+      background-color: white;
       border-left: 2px solid rgb(74, 153, 255) !important;
       animation: animate 4s steps(12) infinite;
   }
