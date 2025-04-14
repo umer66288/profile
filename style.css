@@ -143,7 +143,7 @@ h2,h4{
 }
 .aside{
     overflow-y: scroll;
-    background: #f2f3f7;
+    /* background: #f2f3f7; */
     height: 100vh;
     position:sticky;
     top:0;
